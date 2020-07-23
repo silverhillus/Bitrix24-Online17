@@ -1,2 +1,2 @@
-# Bitrix24-Online17
+This is Bitrix24-Online17 project
 Instructions for the team members
