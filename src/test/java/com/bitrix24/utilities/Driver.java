@@ -71,6 +71,8 @@ public class Driver {
                         driver = new RemoteWebDriver(url, firefoxOptions);
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
+
+                        //////koksal ve deniz
                     }
 
                 default:
