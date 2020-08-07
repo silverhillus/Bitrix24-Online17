@@ -15,12 +15,12 @@ public abstract class BasePage {
     //it will not be visible in test classes
     protected static WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 20);
 
-
-
     public BasePage() {
         //we put this line to be able to use @FindBy, @FindBys.. annotations
         PageFactory.initElements(Driver.getDriver(), this);
     }
+
+
 
 
 
