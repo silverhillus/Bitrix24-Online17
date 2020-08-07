@@ -10,10 +10,8 @@ public class LoginPage extends BasePage{
     @FindBy(name = "USER_PASSWORD")
     public WebElement password;
 
-
-    @FindBy(className = "login-btn")
+    @FindBy(className ="login-btn")
     public WebElement loginButton;
-
 
     @FindBy(className = "errortext")
     public WebElement errorMessage;
