@@ -10,10 +10,10 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber.json",
                 "rerun:target/rerun.txt"
         },
-        features = "src/test/resources/features",
-        glue = "com/bitrix24/step_definitons",
-        dryRun = false
-        //tags = ""
+        features = "src\\test\\resources\\features",
+        glue = "com\\bitrix24\\step_definitons",
+        dryRun = false,
+        tags = "@NegativeLogin"
 )
 
 

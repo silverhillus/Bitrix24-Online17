@@ -1,17 +1,21 @@
 package com.bitrix24.step_definitons;
 
 import com.bitrix24.pages.LoginPage;
+import com.bitrix24.pages.StreamPage;
 import com.bitrix24.utilities.ConfigurationReader;
 import com.bitrix24.utilities.Driver;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Login {
 
     LoginPage loginPage = new LoginPage();
+    StreamPage streamPage = new StreamPage();
     Faker faker = new Faker();
+    WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
 
     @Given("User is on the login page")
     public void user_is_on_the_login_page() {
@@ -32,12 +36,12 @@ public class Login {
 
     @Then("User should be able to verify Activity Stream text is displayed")
     public void user_should_be_able_to_verify_activity_stream_text_is_displayed() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        streamPage.activityStream.isDisplayed();
     }
 
     @When("User enters incorrect username")
     public void user_enters_incorrect_or_incorrect_or_both_incorrect() {
+
         loginPage.username.sendKeys(faker.name().username());
         loginPage.password.sendKeys(ConfigurationReader.getProperty("marketing.password"));
     }
